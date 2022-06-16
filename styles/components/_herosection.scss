@@ -1,0 +1,40 @@
+.herosection-container {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, .3);
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.herosection-img {
+  object-fit: cover;
+}
+
+.herosection-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  background-color: $pink;
+  border-radius: .625rem;
+  padding: 1.5rem 2rem;
+  transform: translate(-50%, -50%);
+}
+
+.herosection-content__title {
+  color: $white;
+  @include font-size(2rem);
+  text-transform: uppercase;
+}
+
+.herosection-content__subtitle {
+  @include font-size(1.25rem);
+  color: $white;
+  font-weight: 300;
+}
